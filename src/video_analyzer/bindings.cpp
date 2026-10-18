@@ -20,8 +20,8 @@ PYBIND11_MODULE(_video_analyzer_engine, module) {
             &video_analyzer::AnalysisResult::predicted_class);
 
     module.def(
-        "run_pipeline",
-        &video_analyzer::run_pipeline,
+        "analyze_videos",
+        &video_analyzer::analyze_videos,
         "Run concurrent video ingestion and batched LibTorch inference",
         py::arg("video_paths"),
         py::arg("model_path"),

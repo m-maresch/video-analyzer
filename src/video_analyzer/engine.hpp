@@ -13,7 +13,7 @@ struct AnalysisResult {
     std::int64_t predicted_class;
 };
 
-std::vector<AnalysisResult> run_pipeline(
+std::vector<AnalysisResult> analyze_videos(
     const std::vector<std::string>& video_paths,
     const std::string& model_path,
     double sample_interval_secs,

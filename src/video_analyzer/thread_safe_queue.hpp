@@ -42,7 +42,7 @@ public:
         return true;
     }
 
-    void set_finished() {
+    void close() {
         std::lock_guard<std::mutex> lock(mutex_);
         finished_ = true;
         condition_.notify_all();

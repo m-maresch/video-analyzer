@@ -90,3 +90,4 @@ Thanks to everyone contributing to any of the following projects:
 - PyTorch and torchvision
 - pybind11
 - Scikit-build-core
+- GoogleTest

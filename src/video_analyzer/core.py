@@ -46,7 +46,7 @@ class VideoAnalyzer:
         if not resolved_paths:
             raise ValueError("No valid video paths provided.")
 
-        analysis_results = _video_analyzer_engine.run_pipeline(
+        analysis_results = _video_analyzer_engine.analyze_videos(
             video_paths=resolved_paths,
             model_path=self.model_path,
             sample_interval_secs=sample_interval_secs,
