@@ -7,9 +7,9 @@ feeds sampled frames through batched model inference.
 
 ## Installation
 
-Install Python, PyTorch with its C++ (LibTorch) files discoverable by CMake,
-CMake 3.18 or newer, a C++20 compiler, and OpenCV. The example script also
-requires torchvision.
+Install Python, PyTorch with its C++ (LibTorch) files, CMake 3.18 or newer, a
+C++20 compiler, and the OpenCV C++ files. Make sure CMake can find
+both Torch and OpenCV. The example script also requires torchvision.
 
 Clone the repository and install the package:
 
@@ -23,7 +23,7 @@ The `pip install .` command takes care of building the C++ engine and installs t
 
 ## Usage
 
-Create or provide a model, then pass its path to `VideoAnalyzer` and pass the video paths to analyze to `analyze`:
+Provide a model, then pass its path to `VideoAnalyzer` and pass the video paths to analyze to `analyze`:
 
 ```python
 from video_analyzer import VideoAnalyzer

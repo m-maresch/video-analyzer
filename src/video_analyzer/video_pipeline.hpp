@@ -6,6 +6,7 @@
 #include <torch/script.h>
 #include <torch/torch.h>
 
+#include <cstddef>
 #include <exception>
 #include <mutex>
 #include <string>
@@ -48,6 +49,7 @@ private:
     int target_width_;
     int target_height_;
     bool use_cuda_;
+    std::size_t frame_queue_batch_capacity_ = 4;
     ThreadSafeQueue<FrameItem> frame_queue_;
     std::vector<AnalysisResult> results_;
     std::mutex failure_mutex_;

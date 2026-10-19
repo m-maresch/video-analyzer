@@ -23,7 +23,7 @@ def export_model(path="mobilenet_v3_small.pt"):
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Video analytics engine")
+    parser = argparse.ArgumentParser(description="Video analyzer")
 
     parser.add_argument(
         "video_paths",

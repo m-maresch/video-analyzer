@@ -24,7 +24,7 @@ VideoPipeline::VideoPipeline(
       target_width_(target_width),
       target_height_(target_height),
       use_cuda_(use_cuda),
-      frame_queue_(static_cast<std::size_t>(batch_size) * 4) {}
+      frame_queue_(batch_size_ * frame_queue_batch_capacity_) {}
 
 void VideoPipeline::record_failure(std::exception_ptr error) {
     {
